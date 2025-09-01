@@ -1,0 +1,1 @@
+This folder hosts the source files and assets for anything developed for the Kalahari Technical Institute of Namibia. It serves as a central hub for web assets, course related materials and other digital resources to support the ongoing collaboration.
