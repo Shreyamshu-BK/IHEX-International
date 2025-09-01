@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ARTIFICIAL INTELLIGENCE</title>
+<meta name="description" content="Industry-ready training with real projects, mentor support, and a recognized certificate for global careers." />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+<!-- Simple CSS -->
+<style>
+:root{
+--brand: #1f6feb; /* <-- change to your brand color */
+--accent: #0f1724;
+--muted: #6b7280;
+--bg: #e2e2e2de;
+--card-bg: #ffffff;
+--radius: 12px;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+color:var(--accent);
+background:var(--bg);
+-webkit-font-smoothing:antialiased;
+}
+a{color:var(--brand); text-decoration:none}
+header{
+position:sticky; top:0; z-index:30;
+backdrop-filter: blur(6px);
+background: linear-gradient(180deg, rgba(255, 233, 244, 0.75), rgba(97, 62, 81, 0.55));
+border-bottom: 1px solid rgba(15,23,36,0.06);
+}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.nav{
+display:flex;align-items:center;justify-content:space-between;padding:12px 0;
+}
+.brand{display:flex;gap:12px;align-items:center}
+.brand img{height:44px;width:auto;border-radius:6px}
+.nav-links{display:flex;gap:18px;align-items:center}
+.nav-links a{font-weight:600;font-size:15px;color:var(--accent)}
+.btn{
+display:inline-block;padding:10px 16px;border-radius:10px;font-weight:700;
+border:2px solid transparent;background:var(--brand);color:#fff;font-size:15px;
+}
+.btn.outline{background:transparent;border-color:var(--brand);color:var(--brand)}
+.hero{
+padding:64px 0 56px;display:flex;align-items:center;gap:40px;
+}
+.hero-grid{display:grid;grid-template-columns:1fr 440px;gap:36px;align-items:center}
+.hero h1{font-family:"Poppins",sans-serif;font-size:42px;margin:0 0 12px;line-height:1.05}
+.hero p{margin:0 0 20px;color:var(--muted);font-size:18px}
+.cta-row{display:flex;gap:12px;align-items:center}
+.partner-strip{margin-top:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:14px}
+.partner-strip img{height:28px;object-fit:contain}
+/* Cards/Sections */
+section{padding:48px 0;border-top:2px solid rgba(10, 96, 235, 0.03)}
+h2{font-size:28px;margin:0 0 18px;color:var(--accent)}
+.muted{color:var(--muted);font-size:16px}
+.grid{display:grid;gap:18px}
+.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.feature{background:var(--card-bg);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,36,0.03)}
+.feature h3{margin:0 0 8px;font-size:18px}
+.feature p{margin:0;color:var(--muted)}
+/* Curriculum */
+.module{padding:16px;border-radius:10px;background:#fff;border:1px solid rgba(15,23,36,0.04)}
+.module h4{margin:0 0 8px;font-size:16px}
+.split{display:flex;gap:28px}
+.trainers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.trainer{background:#fff;padding:12px;border-radius:10px;text-align:center;border:1px solid rgba(15,23,36,0.04)}
+.trainer img{width:88px;height:88px;border-radius:999px;object-fit:cover;margin-bottom:10px}
+/* Pricing */
+.pricing{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.price-card{padding:20px;border-radius:12px;background:linear-gradient(180deg,#ff2121,#2c95ff);border:1px solid rgba(0, 0, 0, 0.04)}
+.price{font-size:28px;font-weight:800;color:var(--brand);margin:0 0 8px}
+/* Testimonials */
+.testi{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.quote{padding:18px;border-radius:10px;background:#fff;border:1px solid rgba(15,23,36,0.04)}
+.faq{display:grid;gap:12px}
+.faq-item{background:#fff;padding:16px;border-radius:10px;border:1px solid rgba(15,23,36,0.04)}
+/* Contact form */
+form{display:grid;gap:12px;max-width:640px}
+input,textarea,select{
+padding:12px;border-radius:8px;border:1px solid rgba(15,23,36,0.08);font-size:15px;width:100%;
+}
+.footer{padding:28px 0;color:var(--muted);font-size:14px;border-top:1px solid rgba(15,23,36,0.03)}
+/* Responsive */
+@media (max-width:960px){
+.hero-grid{grid-template-columns:1fr}
+.grid.cols-3{grid-template-columns:repeat(2,1fr)}
+.trainers{grid-template-columns:repeat(2,1fr)}
+.pricing{grid-template-columns:1fr}
+.testi{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+.grid.cols-3{grid-template-columns:1fr}
+.hero h1{font-size:28px}
+.hero p{font-size:15px}
+.nav-links{display:none}
+.brand img{height:36px}
+}
+</style>
+</head>
+<body>
+
+<!-- Header / Nav -->
+<header>
+<div class="container nav" role="navigation" aria-label="Main navigation">
+<div class="brand">
+<!-- Replace logo.png -->
+<img src="logo.png" alt="[Your Organization] logo">
+<div>
+<div style="font-weight:700">KALAHARI TECHNICAL INSTITUTE OF NAMIBIA</div>
+</div>
+</div>
+
+<nav class="nav-links" aria-label="Page links">
+<a href="#outcomes">Outcomes</a>
+<a href="#curriculum">Curriculum</a>
+<a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- <div style="display:flex;gap:8px;align-items:center">
+<a class="btn outline" href="syllabus.pdf" download>Get Syllabus</a>
+<a class="btn" href="#contact">Request a Demo</a>
+</div> -->
+</div>
+</header>
+
+<!-- Hero -->
+<main>
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<h1>Master Artificial Intelligence</h1>
+<p class="muted">Industry-ready training with real projects, mentor support, and a recognized certificate for global careers. 8 weeks • Live + LMS • Capstone project.</p>
+
+<div class="cta-row">
+<a class="btn" href="#contact">Request a Demo</a>
+<a class="btn outline" href="syllabus.pdf" download>Download Syllabus (PDF)</a>
+</div>
+
+<div class="partner-strip" aria-hidden="false">
+<!-- <span style="font-weight:600;color:var(--muted)">Trusted by</span> -->
+<!-- replace partner-logo.png -->
+<!-- <img src="partner-logo.png" alt="[Partner Institution] logo"> -->
+<!-- replace logos as needed -->
+<!-- <img src="client1.png" alt="Client logo 1"> -->
+<!-- <span style="margin-left:auto;font-size:13px;color:var(--muted)">Co-branded certificate • Global recognition</span> -->
+</div>
+</div>
+
+<div style="background:linear-gradient(180deg,#fff,#f7fbff);padding:22px;border-radius:14px;box-shadow:0 12px 30px rgba(15,23,36,0.05)">
+<div style="font-weight:700;font-size:16px;margin-bottom:12px">Quick Facts</div>
+<div style="display:grid;gap:8px">
+<div class="feature"><strong>Duration:</strong> 2 Months</div>
+<div class="feature"><strong>Effort:</strong> 2–3 hrs/day</div>
+<div class="feature"><strong>Mode:</strong> Live online + recordings + LMS</div>
+<!-- <div class="feature"><strong>Credential:</strong> Co-branded certificate with [Partner Institution]</div> -->
+<!-- <div class="feature"><strong>Placements:</strong> Resume + mock interviews + referrals</div> -->
+</div>
+</div>
+</div>
+</section>
+
+<!-- Outcomes -->
+<section id="outcomes" aria-labelledby="outcomes-title">
+<div class="container">
+<!-- <h2 id="outcomes-title">Outcomes You Can Count On</h2> -->
+<h1>Outcomes You Can Count On</h1>
+<p class="muted">What learners get after completing the program.</p>
+
+<div class="grid cols-3" style="margin-top:18px">
+<div class="feature">
+<h3>Job-Ready Skills</h3>
+<p>Website Development, E-Commerce Tools & Analytics.</p>
+</div>
+<div class="feature">
+<h3>Portfolio Projects</h3>
+<p>Build real-world projects, case studies.</p>
+</div>
+<div class="feature">
+<h3>Mentor Support</h3>
+<p>Weekly live sessions and dedicated doubt clearing.</p>
+</div>
+<div class="feature">
+<h3>Global Credential</h3>
+<p>Co-branded certificate with [Partner Institution].</p>
+</div>
+<div class="feature">
+<h3>Career Support</h3>
+<p>Resume building, mock interviews, and referrals to hiring partners.</p>
+</div>
+<div class="feature">
+<h3>Flexible Delivery</h3>
+<p>Live sessions, recordings, and LMS access for life.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Curriculum -->
+<section id="curriculum" aria-labelledby="curriculum-title">
+<div class="container">
+<h2 id="curriculum-title">Curriculum at a Glance</h2>
+<p class="muted">Duration: 8 weeks • Effort: 10–12 hrs/week • Mode: Live + LMS</p>
+
+<div style="margin-top:18px;display:grid;gap:12px">
+<div class="module">
+<h4>1. Python for AI</h4>
+<p class="muted">NumPy, Pandas, visualization, data wrangling — practical exercises.</p>
+</div>
+
+<div class="module">
+<h4>2. Machine Learning Foundations</h4>
+<p class="muted">Regression, classification, model evaluation, feature engineering.</p>
+</div>
+
+<div class="module">
+<h4>3. Deep Learning</h4>
+<p class="muted">Neural networks, CNNs, RNNs, Transformers basics, transfer learning.</p>
+</div>
+
+<div class="module">
+<h4>4. Applied AI</h4>
+<p class="muted">NLP, Computer Vision, recommendation systems, time-series forecasting.</p>
+</div>
+
+<div class="module">
+<h4>5. MLOps Essentials</h4>
+<p class="muted">Pipelines, model versioning, deployment patterns, monitoring basics.</p>
+</div>
+
+<div class="module">
+<h4>6. Capstone Project</h4>
+<p class="muted">End-to-end real-world project with mentor feedback and presentation.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Who it's for -->
+<section id="audience">
+<div class="container">
+<h2>Who Is This For?</h2>
+<div class="split" style="margin-top:12px">
+<div>
+<h4 style="margin:0 0 8px">Best For</h4>
+<p class="muted">Final-year students, recent graduates, early-career engineers, and professionals switching to AI/ML.</p>
+</div>
+<div>
+<h4 style="margin:0 0 8px">Prerequisites</h4>
+<p class="muted">Comfort with basic programming and high-school level math. A pre-course primer is available if needed.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Partnership -->
+<!-- <section id="partnership">
+<div class="container">
+<h2>Delivered with <span style="color:var(--brand)">IHEX INTERNATIONAL</span></h2>
+<p class="muted">Offered by Kalahari Technical Institute of Namibia in collaboration with IHEX International, ensuring global standards, rigorous assessments, and a co-branded certificate.</p>
+<div style="margin-top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+<img src="partner-logo.png" alt="[Partner Institution] logo" style="height:54px">
+<div style="padding:12px 16px;border-radius:10px;background:#fff;border:1px solid rgba(15,23,36,0.04)">
+<strong>Partnership benefits:</strong>
+<ul style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
+<li>Co-branded certification</li>
+<li>International evaluation standards</li>
+<li>Access to partner resources and networks</li>
+</ul>
+</div>
+</div>
+</div>
+</section> -->
+
+<!-- Trainers -->
+<section id="faculty">
+<div class="container">
+<h2>Meet Your Trainers</h2>
+<div class="trainers" style="margin-top:12px">
+<div class="trainer">
+<img src="trainer1.jpg" alt="Dr. A. Kumar">
+<div style="font-weight:700">Dr. Sabhyasachi Banerji</div>
+<div class="muted" style="font-size:14px">PhD • 10+ yrs in NLP • Ex-[Company]</div>
+</div>
+<div class="trainer">
+<img src="trainer2.jpg" alt="R. Shah">
+<div style="font-weight:700">Dr. Anita Walia</div>
+<div class="muted" style="font-size:14px">MLE • CV & MLOps specialist</div>
+</div>
+<!-- <div class="trainer">
+<img src="trainer3.jpg" alt="S. Iyer">
+<div style="font-weight:700">S. Iyer</div>
+<div class="muted" style="font-size:14px">Data Scientist • Time-series & Forecasting</div>
+</div> -->
+</div>
+</div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing">
+<div class="container">
+<h2>Pricing & Enrollment</h2>
+<p class="muted">Group/institution pricing available — request a custom quote for cohort delivery.</p>
+
+<div class="pricing" style="margin-top:16px">
+<div class="price-card">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div>
+<!-- <div style="font-size:13px;color:var(--muted);">Institution / Cohort</div> -->
+<div style="font-size:13px;color:white;">Institution / Cohort</div>
+<div style="color:rgb(251, 255, 0);", class="price">Custom pricing</div>
+</div>
+<div>
+<a class="btn" href="#contact">Request an Institutional Quote</a>
+</div>
+</div>
+<!-- <ul style="margin-top:12px;color:var(--muted)"> -->
+<ul style="margin-top:12px;color:rgb(251, 255, 0)">    
+<li>Custom schedule & dedicated coordinator</li>
+<li>Onsite/online delivery options</li>
+<li>Volume discounts for larger cohorts</li>
+</ul>
+</div>
+
+<div class="price-card">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div>
+<!-- <div style="font-size:13px;color:var(--muted);">Individual Learners</div> -->
+<div style="font-size:13px;color:white;">Individual Learners</div>
+<!-- <div class="price">₹ 40,000 <span style="font-size:14px;color:var(--muted);font-weight:600"> (or local equivalent)</span></div> -->
+<div style="color:rgb(251, 255, 0) ;", class="price">$ 500 <span style="font-size:14px;color:rgb(251, 255, 0);font-weight:600"></span></div>
+</div>
+<div>
+<a class="btn" href="#contact">Apply Now</a>
+</div>
+</div>
+<!-- <ul style="margin-top:12px;color:var(--muted)"> -->
+<ul style="margin-top:12px;color:rgb(251, 255, 0)">    
+<li>EMI & scholarship options available</li>
+<li>Lifetime access to recordings & materials</li>
+<li>Placement support and mock interviews</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Testimonials -->
+<section id="results">
+<div class="container">
+<h2>What Learners Say</h2>
+<div class="testi" style="margin-top:12px">
+<div class="quote">
+<strong>“The capstone helped me land interviews at top startups.”</strong>
+<p class="muted" style="margin-top:8px">— Priya S., Data Scientist</p>
+</div>
+<div class="quote">
+<strong>“Mentor sessions were the difference-maker.”</strong>
+<p class="muted" style="margin-top:8px">— Ahmed R., ML Engineer</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" aria-labelledby="faq-title">
+<div class="container">
+<h2 id="faq-title">Frequently Asked Questions</h2>
+<div class="faq" style="margin-top:12px">
+<div class="faq-item">
+<strong>Q: What background do I need?</strong>
+<p class="muted">A: Basic programming and math. We offer a pre-course primer for those who need it.</p>
+</div>
+<div class="faq-item">
+<strong>Q: How are classes delivered?</strong>
+<p class="muted">A: Live online sessions (recorded), plus LMS materials and weekly mentor hours.</p>
+</div>
+<div class="faq-item">
+<strong>Q: Is there a certificate?</strong>
+<p class="muted">A: Yes — co-branded certificate with [Partner Institution] on successful completion.</p>
+</div>
+<div class="faq-item">
+<strong>Q: Do you offer placement support?</strong>
+<p class="muted">A: Yes — resume help, mock interviews, and referrals as part of career support.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact / Final CTA -->
+<section id="contact" aria-labelledby="contact-title">
+<div class="container">
+<h2 id="contact-title">Ready to Get Started?</h2>
+<p class="muted">Request a demo, syllabus, or an institutional cohort plan. Fill the form and our team will reach out within 1–2 business days.</p>
+
+<!-- Form: replace action with your endpoint (Formspree, server, Zapier webhook, etc.) -->
+<!-- Example Formspree action: https://formspree.io/f/yourformid -->
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" aria-label="Contact form">
+<input type="text" name="name" placeholder="Full name" required>
+<input type="email" name="_replyto" placeholder="Email address" required>
+<input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
+<select name="role" required>
+<option value="">I am a...</option>
+<option value="student">Student / Individual</option>
+<option value="institution">Institution / College</option>
+<option value="partner">Partner / Recruiter</option>
+</select>
+<input type="text" name="organization" placeholder="Organization (optional)">
+<textarea name="message" rows="4" placeholder="Message / Requirements" required></textarea>
+
+<!-- Hidden fields for tracking -->
+<input type="hidden" name="_subject" value="Course enquiry: AI (website)">
+<!-- If you use Formspree, you can add _next for redirect -->
+<button class="btn" type="submit">Request a Demo</button>
+</form>
+
+<div style="margin-top:16px;color:var(--muted)">
+Or email us directly at <a href="mailto:info@yourorg.example">info@yourorg.example</a> • WhatsApp: <a href="https://wa.me/911234567890">+91 12345 67890</a>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+<div class="container" style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+<div style="display:flex;gap:12px;align-items:center;width:100%;justify-content:space-between">
+<div>
+<div style="font-weight:700">[Your Organization]</div>
+<div class="muted">Address line 1, City, Country • <a href="mailto:info@yourorg.example">info@yourorg.example</a></div>
+</div>
+<!-- Update Social Media links when everything is ready -->
+
+<!-- <div style="display:flex;gap:12px;align-items:center">
+<a href="#" aria-label="LinkedIn">LinkedIn</a>
+<a href="#" aria-label="Twitter">X</a>
+<a href="#" aria-label="YouTube">YouTube</a>
+</div> -->
+</div>
+
+<div style="font-size:13px;color:var(--muted)">© <span id="year"></span> . All rights reserved. <a href="#">Terms</a> • <a href="#">Privacy</a></div>
+</div>
+</footer>
+
+<script>
+// Set current year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+a.addEventListener('click', function(e){
+const target = document.querySelector(this.getAttribute('href'));
+if(target){
+e.preventDefault();
+target.scrollIntoView({behavior:'smooth', block:'start'});
+}
+});
+});
+
+// Simple honeypot (spam protection) - add an optional hidden field if needed
+// You can add more script to handle success modals if your form provider supports JSON responses.
+</script>
+</body>
+</html>
